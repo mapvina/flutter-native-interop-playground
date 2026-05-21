@@ -1,0 +1,38 @@
+#pragma once
+
+#include "../flmln.h"
+
+typedef void* mbgl_camera_options_t;
+
+FFI mbgl_camera_options_t mbgl_camera_options_create();
+FFI void mbgl_camera_options_destroy(mbgl_camera_options_t _cameraOptions);
+
+FFI bool mbgl_camera_options_anchor_is_set(mbgl_camera_options_t _cameraOptions);
+FFI struct MBGL_SCREEN_COORDINATE mbgl_camera_options_anchor_get(mbgl_camera_options_t _cameraOptions);
+FFI void mbgl_camera_options_anchor_set(mbgl_camera_options_t _cameraOptions, struct MBGL_SCREEN_COORDINATE coord);
+FFI void mbgl_camera_options_anchor_clear(mbgl_camera_options_t _cameraOptions);
+
+FFI bool mbgl_camera_options_bearing_is_set(mbgl_camera_options_t _cameraOptions);
+FFI double mbgl_camera_options_bearing_get(mbgl_camera_options_t _cameraOptions);
+FFI void mbgl_camera_options_bearing_set(mbgl_camera_options_t _cameraOptions, double bearing);
+FFI void mbgl_camera_options_bearing_clear(mbgl_camera_options_t _cameraOptions);
+
+bool mbgl_camera_options_center_is_set(mbgl_camera_options_t _cameraOptions);
+FFI struct MBGL_LATLNG mbgl_camera_options_center_get(mbgl_camera_options_t _cameraOptions);
+FFI void mbgl_camera_options_center_set(mbgl_camera_options_t _cameraOptions, MBGL_LATLNG latlng);
+FFI void mbgl_camera_options_center_clear(mbgl_camera_options_t _cameraOptions);
+
+FFI bool mbgl_camera_options_padding_is_set(mbgl_camera_options_t _cameraOptions);
+FFI struct MBGL_EDGE_INSETS mbgl_camera_options_padding_get(mbgl_camera_options_t _cameraOptions);
+FFI void mbgl_camera_options_padding_set(mbgl_camera_options_t _cameraOptions, struct MBGL_EDGE_INSETS padding);
+FFI void mbgl_camera_options_padding_clear(mbgl_camera_options_t _cameraOptions);
+
+FFI bool mbgl_camera_options_pitch_is_set(mbgl_camera_options_t _cameraOptions);
+FFI double mbgl_camera_options_pitch_get(mbgl_camera_options_t _cameraOptions);
+FFI void mbgl_camera_options_pitch_set(mbgl_camera_options_t _cameraOptions, double pitch);
+FFI void mbgl_camera_options_pitch_clear(mbgl_camera_options_t _cameraOptions);
+
+FFI bool mbgl_camera_options_zoom_is_set(mbgl_camera_options_t _cameraOptions);
+FFI double mbgl_camera_options_zoom_get(mbgl_camera_options_t _cameraOptions);
+FFI void mbgl_camera_options_zoom_set(mbgl_camera_options_t _cameraOptions, double zoom);
+FFI void mbgl_camera_options_zoom_clear(mbgl_camera_options_t _cameraOptions);

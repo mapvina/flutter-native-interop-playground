@@ -1,0 +1,2 @@
+-keep class com.mapvina.android.** { *; }
+-keep class com.kekland.flmln.** { *; }
